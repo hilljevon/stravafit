@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Strava Fitness Application
 
-## Getting Started
+## Overview
+The Strava Fitness Application is a data-driven fitness tracker that seamlessly integrates data from the Apple Watch and Strava API, allowing users to automatically sync and visualize their workout data. This application provides detailed insights into users' fitness activities and offers real-time analytics to help users track their progress and stay motivated.
 
-First, run the development server:
+## Features
+- **Secure Authentication:** User login through Strava integration, managed by NextAuth, securely retrieves workout data for the past month.
+- **Comprehensive Analytics:** Offers in-depth workout statistics, including:
+  - **Average Heart Rate:** Monitors heart rate trends over the past month.
+  - **Total Running Distance and Mileage:** Tracks cumulative running distance and individual miles.
+  - **Categorized Workouts:** Differentiates activities such as lifting, running, and stairmaster exercises.
+- **Data Visualization:** Engaging and interactive charts built with ReCharts provide insights on:
+  - **Calories Burned** (benchmarked against national averages)
+  - **Heart Rate Patterns**
+  - **Workout Type Breakdown**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Note
+Due to limited access to the Strava API, only I am currently able to log in and view the complete dashboard. As a result, I’ve configured the API calls to be local, so users can explore a static version of the application post-authentication. This setup serves as a test site using dummy data.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To see dynamic data, you can clone the repository, create a Strava application via their [developer dashboard](https://developers.strava.com/), and set up the required environment variables. Uncomment the `useEffect` API call in the main client component to fetch relevant athlete data for your account.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technologies Used
+- **Frontend:** Next.js, TypeScript
+- **Backend Integration:** Strava API, NextAuth for authentication
+- **Data Visualization:** ReCharts
