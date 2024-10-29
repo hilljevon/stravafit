@@ -129,12 +129,12 @@ const ClientDashboardComponent = () => {
         totalRunDistance: 0,
         totalRunTime: 0
     })
-    const { data: session, status } = useSession({
-        required: true,
-        onUnauthenticated() {
-            redirect('/api/auth/signin?callbackUrl=/')
-        },
-    })
+    // const { data: session, status } = useSession({
+    //     required: true,
+    //     onUnauthenticated() {
+    //         redirect('/api/auth/signin?callbackUrl=/')
+    //     },
+    // })
     const router = useRouter()
     // This useEffect loop pulls from strava account used for login in order to get all relevant athlete info. However, the live demo is currently pulling from static strava data since this app is only compatible with the user's strava account (API restrictions)
     // useEffect(() => {

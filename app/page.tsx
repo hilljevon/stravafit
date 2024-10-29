@@ -5,11 +5,11 @@ import { getServerSession } from "next-auth";
 import { options } from "./api/auth/[...nextauth]/options";
 import ClientDashboardComponent from "@/components/user/ClientDashboardComponent";
 export default async function Home() {
-  const session = await getServerSession(options)
-  if (!session) {
-    console.log('SESSION FAILED')
-    redirect("/api/auth/signin?callbackUrl=/")
-  }
+  // const session = await getServerSession(options)
+  // if (!session) {
+  //   console.log('SESSION FAILED')
+  //   redirect("/api/auth/signin?callbackUrl=/")
+  // }
   return (
     <ClientDashboardComponent />
   );
