@@ -55,4 +55,5 @@ export const options: NextAuthOptions = {
             return baseUrl // Redirects to the home page (`/`)
         },
     },
+    secret: process.env.NEXTAUTH_SECRET
 }
