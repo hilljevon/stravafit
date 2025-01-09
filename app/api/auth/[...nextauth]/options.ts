@@ -10,6 +10,7 @@ export const options: NextAuthOptions = {
                 url: "https://www.strava.com/oauth/authorize",
                 params: {
                     scope: "activity:read_all",
+                    redirect_uri: "http://localhost:3000/exchange_token"
                 }
             }
         }),
